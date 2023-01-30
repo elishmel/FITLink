@@ -18,6 +18,7 @@ function markLanguage(){
 
 function init(){
     markLanguage();
+    switchLanguage();
 }
 
 function getLanguage(){
