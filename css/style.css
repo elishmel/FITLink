@@ -1,0 +1,44 @@
+body > nav {
+    box-shadow: 0 1px 0 rgba(115, 130, 140, 0.2);
+}
+
+body > main {
+    padding-top: 1rem * 3;
+    padding-bottom: 0px;
+}
+
+body > footer {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(115, 130, 140, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.grid-style {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 15px;
+}
+
+.author {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.authorText {
+    margin: 15px 0 15px 0;
+}
+
+.title {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 8px;
+}
+
+.icon {
+    border-radius: 15%;
+}
+
+article {
+    margin-top: 0 !important; 
+}
