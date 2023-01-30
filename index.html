@@ -15,15 +15,20 @@
     <nav class="container-fluid">
         <ul>
             <li>
-                FITLink
+                <img src="./img/iconmonstr-link-thin-240.png" width="48px" height="48px">
+                <span class="title" style="font-size:xx-large;font-weight: bolder; border-bottom-width: 1px;border-bottom-style: solid; padding-right: 0 !important;"><a href="." style="text-decoration: none;">FITLink</a></span>
             </li>
         </ul>
         <ul>
             <li>
+                <input id="theme-switch" type="checkbox" class="theme-switch" onchange="themeSwitch()">
+                <label for="theme-switch"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 4c-4.418 0-8 3.582-8 8s3.582 8 8 8v-16z"/></svg></label>
+            </li>
+            <li>
                 <select id="lang-selector" onchange="switchLanguage()"> 
                     <option value="cs">🇨🇿</option>
                     <option value="en">🇬🇧</option>
-                  </select>
+                </select>
             </li>
         </ul>
     </nav>
@@ -33,7 +38,7 @@
     </main>
     <footer class="container-fluid">
         <div class="author">
-            <p align="center" class="authorText">Made with &lt;3 by Elis Himmel</p>
+            <p style="display: inline-block;"  align="center" class="authorText">Made with <svg xmlns="http://www.w3.org/2000/svg" style="color: #E90606;"  width="16" height="16" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg> by Elis Himmel.</p>
         </div>
     </footer>
     <!--Icons sourced from respective websites or from https://iconmonstr.com .-->

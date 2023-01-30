@@ -1,7 +1,7 @@
 const DESC = "Desc";
 const TITLE = "Title";
 const SUB_TITLE = "SubTit";
-const NO_ICO = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNS4yNDYgMTdjLS45MjcgMy43MDEtMi41NDcgNi0zLjI0NiA3LS42OTktMS0yLjMyLTMuMjk4LTMuMjQ2LTdoNi40OTJ6bTcuNjY0IDBjLTEuNTU4IDMuMzkxLTQuNjUgNS45MzMtOC4zODYgNi43MzMgMS4zMTUtMi4wNjggMi4yNDItNC4zNjIgMi43NzctNi43MzNoNS42MDl6bS0yMS44MiAwaDUuNjA5Yy41MzkgMi4zODYgMS40NyA0LjY3OCAyLjc3NyA2LjczMy0zLjczNi0uOC02LjgyOC0zLjM0Mi04LjM4Ni02LjczM3ptMTQuNTUtMmgtNy4yOGMtLjI5LTEuOTg1LS4yOS00LjAxNCAwLTZoNy4yODFjLjI4OCAxLjk4Ni4yODggNC4wMTUtLjAwMSA2em0tOS4yOTkgMGgtNS45NjJjLS4yNDgtLjk1OC0uMzc5LTEuOTY0LS4zNzktM3MuMTMxLTIuMDQxLjM3OS0zaDUuOTYyYy0uMjYzIDEuOTg4LS4yNjMgNC4wMTIgMCA2em0xNy4yOCAwaC01Ljk2M2MuMjY1LTEuOTg4LjI2NS00LjAxMi4wMDEtNmg1Ljk2MmMuMjQ3Ljk1OS4zNzkgMS45NjQuMzc5IDNzLS4xMzIgMi4wNDItLjM3OSAzem0tOC4zNzUtOGgtNi40OTJjLjkyNS0zLjcwMiAyLjU0Ni02IDMuMjQ2LTcgMS4xOTQgMS43MDggMi40NDQgMy43OTkgMy4yNDYgN3ptLTguNTQ4LS4wMDFoLTUuNjA5YzEuNTU5LTMuMzkgNC42NTEtNS45MzIgOC4zODctNi43MzMtMS4yMzcgMS45NC0yLjIxNCA0LjIzNy0yLjc3OCA2LjczM3ptMTYuMjEyIDBoLTUuNjA5Yy0uNTU3LTIuNDYyLTEuNTEzLTQuNzUtMi43NzgtNi43MzMgMy43MzYuODAxIDYuODI5IDMuMzQzIDguMzg3IDYuNzMzeiIvPjwvc3ZnPg==";
+const NO_ICO = "./img/globe.svg";
 
 const DARK_LANG_ICON = "";
 const LIGHT_LANG_ICON = "";
@@ -19,6 +19,7 @@ function markLanguage(){
 function init(){
     markLanguage();
     switchLanguage();
+    loadTheme();
 }
 
 function getLanguage(){
@@ -38,21 +39,6 @@ function getLanguage(){
 
 
     return "cs";
-}
-
-function validateTheme(){
-    var html = document.getElementsByTagName("html");
-    switch (html.dataset.theme) {
-        case "dark":
-            
-            break;
-        case "light":
-
-            break;
-        default:
-
-            break;
-    }
 }
 
 function parseINIString(data){
@@ -192,4 +178,36 @@ function renderError(){
     modalBody.appendChild(text);
     modal.appendChild(modalBody);
     body.appendChild(modal);
+}
+
+function themeSwitch(){
+    var target = document.getElementById("theme-switch");
+    var currentTheme = getTheme();
+    if(currentTheme == "dark"){
+        applyScheme("light");
+    } else {
+        applyScheme("dark");
+    }
+}
+
+function loadTheme(){
+    var th = localStorage.getItem("picoPreferedColorScheme");
+    if(th != null){
+        applyScheme(th);
+    }
+}
+
+function getTheme(){
+    var th = localStorage.getItem("picoPreferedColorScheme");
+    if(th != null){
+        return th;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyScheme(scheme) {
+    document.querySelector("html").setAttribute("data-theme", scheme),
+    document.getElementById("theme-switch");
+    localStorage.setItem("picoPreferedColorScheme",scheme);
 }

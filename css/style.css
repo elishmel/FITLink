@@ -1,5 +1,9 @@
 body > nav {
     box-shadow: 0 1px 0 rgba(115, 130, 140, 0.2);
+    position: fixed;
+    background-color: var(background-color);
+    backdrop-filter: saturate(100%) blur(40px);
+    -webkit-backdrop-filter: saturate(100%) blur(40px);
 }
 
 body > main {
@@ -16,15 +20,16 @@ body > footer {
 }
 
 .grid-style {
+    padding-top: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 @media screen and (max-width: 1200px) {
 
     .grid-style {
         grid-template-columns: 1fr 1fr;
-        row-gap: 15px;
+        row-gap: 10px;
     }
 }
 
@@ -87,4 +92,19 @@ article > footer > button {
 
 #lang-selector{
     border: none;
+}
+
+.theme-switch {
+    display: none;
+}
+
+.theme-switch + label:before {
+    -webkit-filter: invert(0%); /* safari 6.0 - 9.0 */
+    filter: invert(0%);
+}
+
+.theme-switch:checked + label:before{
+
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
 }
