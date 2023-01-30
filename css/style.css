@@ -19,13 +19,16 @@ body > footer {
     align-items: center;
 }
 
-.grid-style {
-    padding-top: 3rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10px;
+@media only screen and (min-width: 992px){
+    
+    .grid-style {
+        padding-top: 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+@media only screen and (min-width: 768px) {
 
     .grid-style {
         grid-template-columns: 1fr 1fr;
@@ -33,13 +36,13 @@ body > footer {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 600px) {
 
     .grid-style {
         grid-template-columns: 1fr;
         row-gap: 60px;
-        padding-left: 7rem;
-        padding-right: 7rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 }
 
