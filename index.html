@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/script.js" defer></script>
     <script type="text/javascript" src="js/l10n.js"></script>
 </head>
-<body>
+<body onload="init()">
     <nav class="container-fluid">
         <ul>
             <li>
@@ -20,7 +20,10 @@
         </ul>
         <ul>
             <li>
-                <button onclick="switchLanguage('cs')">Language</button>
+                <select id="lang-selector" onchange="switchLanguage()"> 
+                    <option value="cs">🇨🇿</option>
+                    <option value="en">🇬🇧</option>
+                  </select>
             </li>
         </ul>
     </nav>
@@ -33,5 +36,6 @@
             <p align="center" class="authorText">Made with &lt;3 by Elis Himmel</p>
         </div>
     </footer>
+    <!--Icons sourced from respective websites or from https://iconmonstr.com .-->
 </body>
 </html>

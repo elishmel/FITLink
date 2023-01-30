@@ -20,6 +20,24 @@ body > footer {
     row-gap: 15px;
 }
 
+@media screen and (max-width: 1200px) {
+
+    .grid-style {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .grid-style {
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
 .author {
     margin-left: auto;
     margin-right: auto;
@@ -37,8 +55,36 @@ body > footer {
 
 .icon {
     border-radius: 15%;
+    background-color: whitesmoke;
 }
 
 article {
-    margin-top: 0 !important; 
+   margin-top: 0 !important;
+}
+
+article > header {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+article > header > hgroup {
+    margin-bottom: 0.5rem;
+}
+
+article > p {
+    height: 35%;
+}
+
+article > footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+article > footer > button {
+    margin-bottom: 0;
+}
+
+#lang-selector{
+    border: none;
 }
