@@ -29,6 +29,12 @@ body > footer {
         padding-left: 10vw;
         padding-right: 10vw;
     }
+
+    article {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        min-width: 200px !important;
+     }
 }
 
 @media only screen and (min-width: 600px) {
