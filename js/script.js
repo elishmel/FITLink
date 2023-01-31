@@ -110,7 +110,7 @@ function buildCard(name,imgUrl,targetUrl){
     var footer = document.createElement("footer");
 
     imageSpan.innerHTML = name;
-    imageSpan.classList.add("title");
+    imageSpan.classList.add("article-title");
     imageSpan.dataset.l10nId = name + TITLE;
 
     image.setAttribute("width","28px");
