@@ -95,11 +95,33 @@ body > footer {
         margin-bottom: 0 !important;
         min-width: 310px !important;
      }
+
+         .title-image {
+        width: 48px;
+        height: 48px;
+    }
 }
 
+@media screen and (min-width: 1900px){
+    
+    .grid-style {
+        padding-top: 5vh;
+        padding-bottom: 4vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 30px;
+    }
 
+    article {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        min-width: 310px !important;
+    }
 
-
+    .title-image {
+        width: 48px;
+        height: 48px;
+    }
+}
 
 .author {
     margin-left: auto;
