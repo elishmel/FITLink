@@ -90,8 +90,8 @@ body > footer {
         padding-bottom: 4vh;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 30px;
-        margin-left: 12vw;
-        margin-right: 12vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
 
     article {
@@ -120,8 +120,8 @@ body > footer {
         padding-bottom: 4vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         row-gap: 30px;
-        margin-left: 21vw;
-        margin-right: 21vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
 
     article {
