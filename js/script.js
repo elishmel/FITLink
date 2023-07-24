@@ -106,7 +106,7 @@ function buildCard(name,imgUrl,targetUrl){
     var imageSpan = document.createElement("span");
     var image = document.createElement("img");
     var desc = document.createElement("p");
-    var button = document.createElement("button");
+    var button = document.createElement("a");
     var footer = document.createElement("footer");
 
     imageSpan.innerHTML = name;
@@ -131,10 +131,13 @@ function buildCard(name,imgUrl,targetUrl){
     desc.dataset.l10nId = name + DESC;
     desc.innerHTML = name;
 
-    button.onclick = function(){window.open(targetUrl,'_blank')};
+    button.href = targetUrl;
+    button.target = "_blank";
+    //button.onclick = function(){window.open(targetUrl,'_blank')};
     button.dataset.l10nId = "button";
     button.classList.add("outline");
 
+    //footer.appendChild(a);
     footer.appendChild(button);
 
     article.appendChild(header);
