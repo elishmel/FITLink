@@ -136,6 +136,7 @@ function buildCard(name,imgUrl,targetUrl){
     //button.onclick = function(){window.open(targetUrl,'_blank')};
     button.dataset.l10nId = "button";
     button.classList.add("outline");
+    button.classList.add("linkButton");
 
     //footer.appendChild(a);
     footer.appendChild(button);
