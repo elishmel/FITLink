@@ -131,12 +131,12 @@ function buildCard(name,imgUrl,targetUrl){
     desc.dataset.l10nId = name + DESC;
     desc.innerHTML = name;
 
-    button.href = targetUrl;
-    button.target = "_blank";
-    //button.onclick = function(){window.open(targetUrl,'_blank')};
+    //button.href = targetUrl;
+    //button.target = "_blank";
+    button.onclick = function(){window.open(targetUrl,'_blank')};
     button.dataset.l10nId = "button";
     button.classList.add("outline");
-    button.classList.add("linkButton");
+    //button.classList.add("linkButton");
 
     //footer.appendChild(a);
     footer.appendChild(button);
