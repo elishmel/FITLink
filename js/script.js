@@ -106,7 +106,7 @@ function buildCard(name,imgUrl,targetUrl){
     var imageSpan = document.createElement("span");
     var image = document.createElement("img");
     var desc = document.createElement("p");
-    var button = document.createElement("a");
+    var button = document.createElement("button");
     var footer = document.createElement("footer");
 
     imageSpan.innerHTML = name;
